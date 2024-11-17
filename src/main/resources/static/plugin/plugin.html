@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenster unten rechts</title>
+    <style>
+        /* Stil für das Fenster unten rechts */
+        .floating-window {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            z-index: 1000;
+        }
+
+        /* Stil für den Textbereich */
+        .window-content {
+            max-height: 100px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Stil für das Eingabefeld und den Button */
+        .input-row {
+            display: flex;
+            gap: 5px;
+        }
+        .input-row input[type="text"] {
+            flex-grow: 1;
+            padding: 5px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-row button {
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-row button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Fenster unten rechts -->
+<div class="floating-window">
+    <div class="window-content">
+        <p>Hier ist ein Beispieltext, der in diesem Fenster angezeigt wird.</p>
+    </div>
+    <div class="input-row">
+        <input type="text" placeholder="Deine Nachricht">
+        <button onclick="sendMessage()">Absenden</button>
+    </div>
+</div>
+
+
+</body>
+</html>
